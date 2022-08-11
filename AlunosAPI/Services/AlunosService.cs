@@ -53,6 +53,7 @@ namespace AlunosAPI.Services
         public async Task UpdateAluno(Aluno aluno)
         {
             _context.Entry(aluno).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAluno(Aluno aluno)
